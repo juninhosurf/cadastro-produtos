@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2><%= title %></h2>
+<a  href="/cadastro">Cadastrar Novo</a>
+<table>
+  <tr>
+    <th>Descrição</th>
+    <th>Fabricante</th>
+    <th>Preço</th>
+  </tr>
+  <% for(var i=0; i < produtos.length; i++) { %>
+  <tr>
+    <td><%= produtos[i].descricao %></td>
+    <td><%= produtos[i].marca %></td>
+    <td><%= produtos[i].preco %></td>
+  </tr>
+  <% } %>
+</table>
+
+</body>
+</html>
+
